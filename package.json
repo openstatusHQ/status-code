@@ -7,7 +7,7 @@
     "test": "jest --verbose",
     "dev:bun": "bun src/index.ts",
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler publish src/index.ts"
+    "deploy": "wrangler deploy src/index.ts"
   },
   "license": "MIT",
   "dependencies": {
