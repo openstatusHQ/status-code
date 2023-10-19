@@ -9,7 +9,7 @@ app.use('*', logger())
 app.use('*', poweredBy())
 
 app.get('/', (c) => {
-  return c.text('Just have fun !')
+  return c.text('Just return the desired http status code, e.g. /404 🤯 \nhttps://www.openstatus.dev')
 })
 app.get('/100', (c) => {
   return c.text("100",100)
