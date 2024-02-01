@@ -11,18 +11,20 @@ app.use('*', poweredBy())
 app.get('/', (c) => {
   return c.text('Just return the desired http status code, e.g. /404 🤯 \nhttps://www.openstatus.dev')
 })
+//  Informational responses (100–199)
 app.get('/100', (c) => {
-  return c.text("100",100)
+  return c.text("100 - Continue - This interim response indicates that the client should continue the request or ignore the response if the request is already finished. ",100)
 })
 app.get('/101', (c) => {
-  return c.text("101",101)
+  return c.text("101 Switching Protocols - This code is sent in response to an Upgrade request header from the client and indicates the protocol the server is switching to.",101)
 })
 app.get('/102', (c) => {
-  return c.text("102",102)
+  return c.text("102 - Processing - This code indicates that the server has received and is processing the request, but no response is available yet.",102)
 })
 app.get('/103', (c) => {
-  return c.text("103",103)
+  return c.text("103 - Early Hints - This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.",103)
 })
+//  Successful responses (200–299)
 app.get('/200', (c) => {
   return c.text("200",200)
 })
