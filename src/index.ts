@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
-import { poweredBy } from 'hono/powered-by'
 import { logger } from 'hono/logger'
+import { poweredBy } from 'hono/powered-by'
 
 
 const app = new Hono()
@@ -10,10 +10,10 @@ app.use('*', poweredBy())
 
 app.get('/', (c) => {
   return c.html(
-    `<h1>OpenStat.us</h1>
-    <p>OpenStat.us is a simple website that returns the different HTTP status codes.  </p>
+    `<h1>openstat.us</h1>
+    <p>openstat.us is a simple website that returns the different HTTP status codes.</p>
 
-    <p> Want to monitor your website's status? Check out <a href="https://www.openstatus.dev/">openstatus.dev</a> for a simple and easy to use website monitoring service.</p>
+    <p> Want to monitor your endpoint? Check out <a href="https://www.openstatus.dev/">www.openstatus.dev</a>.</p>
     <p>Here are the different status codes:</p>
     <h2>Informational responses (100–199)</h2>
     <p><a href="/100">100 - Continue</a></p>
